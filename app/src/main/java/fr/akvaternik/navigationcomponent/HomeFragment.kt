@@ -18,7 +18,8 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         button.setOnClickListener {
-            findNavController().navigate(R.id.go_to_details)
+            val directions = HomeFragmentDirections.goToDetails().setName("Adrien")
+            findNavController().navigate(directions)
         }
     }
 }

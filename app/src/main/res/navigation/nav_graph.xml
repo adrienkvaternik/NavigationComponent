@@ -19,5 +19,9 @@
     <fragment android:id="@+id/detailsFragment"
               android:name="fr.akvaternik.navigationcomponent.DetailsFragment"
               android:label="Details"
-              tools:layout="@layout/fragment_details"/>
+              tools:layout="@layout/fragment_details">
+        <argument android:name="name"
+                  app:argType="string"
+                  android:defaultValue="world"/>
+    </fragment>
 </navigation>
