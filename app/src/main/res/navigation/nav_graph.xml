@@ -24,4 +24,12 @@
                   app:argType="string"
                   android:defaultValue="world"/>
     </fragment>
+    <fragment android:id="@+id/favoritesFragment"
+              android:name="fr.akvaternik.navigationcomponent.FavoritesFragment"
+              android:label="Favorites"
+              tools:layout="@layout/fragment_favorites"/>
+    <fragment android:id="@+id/settingsFragment"
+              android:name="fr.akvaternik.navigationcomponent.SettingsFragment"
+              android:label="Settings"
+              tools:layout="@layout/fragment_settings"/>
 </navigation>

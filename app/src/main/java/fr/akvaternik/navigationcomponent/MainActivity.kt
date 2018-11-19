@@ -16,5 +16,7 @@ class MainActivity : AppCompatActivity() {
 
         setSupportActionBar(toolbar)
         toolbar.setupWithNavController(navController, null)
+
+        bottomNavigationView.setupWithNavController(navController)
     }
 }
