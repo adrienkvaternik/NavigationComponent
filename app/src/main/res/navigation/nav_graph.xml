@@ -23,6 +23,7 @@
         <argument android:name="name"
                   app:argType="string"
                   android:defaultValue="world"/>
+        <deepLink app:uri="https://navigationcomponent.akvaternik.fr/details/{name}"/>
     </fragment>
     <fragment android:id="@+id/favoritesFragment"
               android:name="fr.akvaternik.navigationcomponent.FavoritesFragment"
