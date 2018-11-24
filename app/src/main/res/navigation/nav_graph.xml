@@ -5,6 +5,8 @@
             android:id="@+id/nav_graph"
             app:startDestination="@id/homeFragment">
 
+    <custom android:id="@+id/customDestination" />
+
     <fragment android:id="@+id/homeFragment"
               android:name="fr.akvaternik.navigationcomponent.HomeFragment"
               android:label="Home"
