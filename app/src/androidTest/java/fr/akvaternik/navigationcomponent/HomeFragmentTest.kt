@@ -2,13 +2,13 @@ package fr.akvaternik.navigationcomponent
 
 import androidx.fragment.app.testing.launchFragmentInContainer
 import androidx.navigation.NavController
+import androidx.navigation.NavDirections
 import androidx.navigation.Navigation
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.click
 import androidx.test.espresso.matcher.ViewMatchers.withId
+import io.mockk.*
 import org.junit.Test
-import org.mockito.Mockito.mock
-import org.mockito.Mockito.verify
 
 class HomeFragmentTest {
 
@@ -17,7 +17,9 @@ class HomeFragmentTest {
         // Given
         val scenario = launchFragmentInContainer<HomeFragment>()
 
-        val navController = mock(NavController::class.java)
+        val navController = mockk<NavController>()
+        every { navController.navigate(any() as NavDirections) } just Runs
+
         scenario.onFragment { fragment ->
             Navigation.setViewNavController(fragment.view!!, navController)
         }
@@ -27,6 +29,6 @@ class HomeFragmentTest {
 
         // Then
         val directions = HomeFragmentDirections.goToDetails().setName("Adrien")
-        verify(navController).navigate(directions)
+        verify { navController.navigate(directions) }
     }
 }
