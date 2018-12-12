@@ -7,8 +7,9 @@ import androidx.navigation.Navigator
 
 @Navigator.Name("custom")
 class MyNavigator : Navigator<MyNavigator.Destination>() {
-    override fun navigate(destination: Destination, args: Bundle?, navOptions: NavOptions?, navigatorExtras: Extras?) {
+    override fun navigate(destination: Destination, args: Bundle?, navOptions: NavOptions?, navigatorExtras: Extras?): NavDestination? {
         // Perform navigation here.
+        return null
     }
 
     override fun createDestination(): Destination {
