@@ -32,9 +32,9 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation "android.arch.navigation:navigation-fragment-ktx:$nav_version"
     implementation "android.arch.navigation:navigation-ui-ktx:$nav_version"
-    implementation 'androidx.fragment:fragment:1.1.0-alpha01'
+    implementation "androidx.fragment:fragment:$fragment_version"
     implementation 'androidx.test:monitor:1.1.0'
-    debugImplementation 'androidx.fragment:fragment-testing:1.1.0-alpha01'
+    debugImplementation "androidx.fragment:fragment-testing:$fragment_version"
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
