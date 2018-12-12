@@ -2,7 +2,6 @@ package fr.akvaternik.navigationcomponent
 
 import androidx.fragment.app.testing.launchFragmentInContainer
 import androidx.navigation.NavController
-import androidx.navigation.NavDirections
 import androidx.navigation.Navigation
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.click
@@ -17,8 +16,7 @@ class HomeFragmentTest {
         // Given
         val scenario = launchFragmentInContainer<HomeFragment>()
 
-        val navController = mockk<NavController>()
-        every { navController.navigate(any() as NavDirections) } just Runs
+        val navController = mockk<NavController>(relaxed = true)
 
         scenario.onFragment { fragment ->
             Navigation.setViewNavController(fragment.view!!, navController)
